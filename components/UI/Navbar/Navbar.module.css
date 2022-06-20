@@ -1,0 +1,18 @@
+.navbar-links {
+  display: grid;
+  grid-auto-rows: 3rem;
+  grid-template-columns: repeat(1, 100%);
+  row-gap: 0.4rem;
+  color: aliceblue;
+  grid-row-start: 4;
+}
+.navbar-links a {
+  font-size: clamp(1rem, 2vw, 3rem);
+  font-weight: 500;
+  padding-left: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #c6c6c6;
+  margin: 0;
+}
