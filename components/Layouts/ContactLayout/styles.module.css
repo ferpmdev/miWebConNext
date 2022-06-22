@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: 17% 5% 78%;
   background-image: url("/fond.png");
+  background-size: content;
   z-index: -10;
   left: 0;
   right: 0;
@@ -19,7 +20,7 @@
   grid-auto-rows: 3rem;
   grid-template-columns: repeat(1, 100%);
   font-weight: 500;
-  background-color: rgba(27, 27, 27, 0.831);
+  background-color: rgba(27, 27, 27, 0.898);
   row-gap: 0.4rem;
   padding-left: 2rem;
 }
@@ -40,7 +41,7 @@
   grid-template-columns: repeat(1, 100%);
   font-weight: 500;
   text-align: right;
-  background-color: rgba(27, 27, 27, 0.831);
+  background-color: rgba(27, 27, 27, 0.898);
   row-gap: 0.4rem;
 }
 
@@ -76,7 +77,7 @@
   display: grid;
   grid-auto-rows: 3rem;
   grid-template-columns: repeat(1, 100%);
-  background-color: rgba(27, 27, 27, 0.932);
+  background-color: rgba(27, 27, 27, 0.958);
   row-gap: 0.4rem;
 }
 
@@ -101,4 +102,15 @@
   top: 0;
   left: 30%;
   right: 0;
+  animation-name: pinceladaBack;
+  animation-duration: 3s;
+}
+
+@keyframes pinceladaBack {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

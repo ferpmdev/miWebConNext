@@ -12,7 +12,6 @@
   right: 0;
   top: 0;
   font-size: clamp(1rem, 1.8vw, 3rem);
-  /* overflow-x: hidden; */
 }
 
 .grid-left {
@@ -108,8 +107,8 @@
 }
 
 /*********************
-***** MY WORKS *****
-*********************/
+  ***** MY WORKS *****
+  *********************/
 
 .row-start-5 {
   grid-row-start: 5;
@@ -172,8 +171,8 @@
 }
 
 /*********************
-***** SKILLS *****
-*********************/
+  ***** SKILLS *****
+  *********************/
 
 .skillsH1 {
   grid-row-start: 11;
@@ -215,9 +214,9 @@
 .skill-img img {
   /* position: absolute; */
   /* 
-  top: 80%;
-  left: 80%;
-  right: 0; */
+    top: 80%;
+    left: 80%;
+    right: 0; */
   margin-left: 60%;
   width: 27%;
   overflow: hidden;
