@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "./styles.module.css";
 import { Navbar } from "../../UI/Navbar/index";
+import { NavbarMobile } from "../../UI/NavbarMobile/index";
 
 export default function MainLayout({ children, index }) {
   let newArray = [];
@@ -24,7 +25,12 @@ export default function MainLayout({ children, index }) {
         <div className={styles["grid1"]}>
           {/*///////////////// ASIDE ////////////////////*/}
           <div className={styles["grid-left"]}>
-            <Navbar />
+            <div className={styles["grid-left-desktop"]}>
+              <Navbar />
+            </div>
+            <div className={styles["grid-left-mobile"]}>
+              <NavbarMobile />
+            </div>
           </div>
           <div className={styles["grid-midle"]}>
             {newArray &&
@@ -37,10 +43,10 @@ export default function MainLayout({ children, index }) {
 
           {/*//////////////////// MAIN ///////////////////////*/}
           <div className={styles["grid-rigth"]}>{children}</div>
+          {/*///////////////// PINCELADA BACKGROUND ////////////////////*/}
         </div>
-        {/*///////////////// BACKGROUND ////////////////////*/}
-        <div className={styles["pinceladas"]}></div>
       </div>
+      <div className={styles["pinceladas"]}></div>
     </div>
   );
 }

@@ -3,18 +3,18 @@
   width: 100%;
   height: 100%;
   background-image: url("/fond.png");
-  background-size: cover;
+  background-size: contain;
   z-index: -20;
 }
 .grid1 {
   /* background-color: #000000; */
   background-color: rgba(27, 27, 27, 0.109);
   display: grid;
-  grid-template-columns: 17% 5% 78%;
+  grid-template-columns: 15% 5% 1fr;
   left: 0;
   right: 0;
   top: 0;
-  font-size: clamp(1.2rem, 2.2vw, 3rem);
+  font-size: clamp(1.2rem, 2vw, 2.5rem);
   min-width: 100%;
   z-index: -10;
 }
@@ -26,7 +26,7 @@
   font-weight: 500;
   background-color: rgba(27, 27, 27, 0.65);
   row-gap: 0.4rem;
-  padding-left: 2rem;
+  padding-left: 2vw;
   z-index: 10;
 }
 
@@ -34,21 +34,22 @@
   display: grid;
   grid-auto-rows: 3rem;
   grid-template-columns: repeat(1, 100%);
-  font-weight: 500;
   text-align: right;
   background-color: rgba(27, 27, 27, 0.65);
   row-gap: 0.4rem;
   padding-right: 0.5rem;
 }
 .flexh5 {
-  font-family: "Roboto Mono", sans-serif;
   display: flex;
   flex-direction: column;
+  font-family: "Roboto Mono", sans-serif;
   justify-content: center;
-  /* overflow: hidden; */
-  /* margin: 0.2rem 0; */
   flex-wrap: nowrap;
-  color: aliceblue;
+  color: rgba(240, 254, 255, 0.644);
+}
+
+.flexh5 h5 {
+  font-weight: 100;
 }
 
 .grid-rigth {
@@ -61,15 +62,20 @@
 
 .pinceladas {
   position: absolute;
-  top: 0;
-  background-image: url("/pinceladas.png");
-  left: 30%;
+  background-image: url("/brushCut.png");
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 20%;
+  left: 0%;
   right: 0;
+  bottom: 0;
   animation-name: pinceladaBack;
   animation-duration: 3s;
-  width: 70%;
+  width: 100%;
   height: 100%;
   z-index: 0;
+  filter: drop-shadow(-6rem -6rem 4rem rgba(0, 0, 0, 0.433));
 }
 
 @keyframes pinceladaBack {
@@ -78,5 +84,48 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+.grid-left-desktop {
+  display: block;
+}
+
+.grid-left-mobile {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .grid1 {
+    grid-template-columns: 20% 5% 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .grid1 {
+    grid-template-columns: 8% 5% 1fr;
+  }
+  .grid-left {
+    padding-left: 1vw;
+  }
+  .grid-left-desktop {
+    display: none;
+  }
+  .grid-left-mobile {
+    display: flex;
+    justify-content: center;
+  }
+  .grid-rigth {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 481px) {
+  .grid1 {
+    grid-template-columns: 12% 1% 1fr;
+  }
+  .flexh5 h5 {
+    opacity: 0;
   }
 }

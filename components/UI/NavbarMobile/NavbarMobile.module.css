@@ -1,0 +1,69 @@
+.navbar-mobile {
+  color: white;
+  position: fixed;
+  top: 1rem;
+}
+.navbar-links {
+  display: grid;
+  grid-auto-rows: 2rem;
+  grid-template-columns: repeat(1, 100%);
+  row-gap: 0.1rem;
+  color: white;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.732);
+  left: 0;
+  bottom: 0;
+  padding: 3rem 0.7rem 0.5rem;
+  z-index: -10;
+  animation-name: sidebar-on;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: even;
+}
+
+@keyframes sidebar-on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar-links-item {
+  display: flex;
+}
+
+.navbar-links-a {
+  font-size: clamp(0.9rem, 1.7vw, 2.5rem);
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #ebebeb;
+  padding-left: 0.35rem;
+  opacity: 0.4;
+}
+
+.navbar-links-a:hover {
+  transition: all;
+  transition-duration: 1s;
+  opacity: 0.8;
+  text-shadow: 2rem 2rem 2rem #000000;
+}
+
+.navbar-links-active {
+  font-size: clamp(0.9rem, 1.7vw, 2.5rem);
+  padding-left: 0.35rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #c6c6c6;
+  margin: 0;
+  font-weight: 900;
+}
+
+.z-index-10 {
+  z-index: 10;
+}

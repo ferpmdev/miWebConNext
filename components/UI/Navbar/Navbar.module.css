@@ -4,23 +4,36 @@
   grid-template-columns: repeat(1, 100%);
   row-gap: 0.4rem;
   color: aliceblue;
-  grid-row-start: 4;
+  position: fixed;
+  top: 6rem;
+}
+.navbar-links-item {
+  display: flex;
+}
+.navbar-links-item-img {
+  padding: 0.7rem 0 0.7rem;
 }
 .navbar-links-a {
-  font-size: clamp(1rem, 2vw, 3rem);
+  font-size: clamp(1rem, 1.7vw, 2.5rem);
   font-weight: 500;
-  padding-left: 0.5rem;
   width: 100%;
   display: flex;
   align-items: center;
   color: #c6c6c6;
-  margin: 0;
+  padding-left: 0.35rem;
   opacity: 0.4;
 }
 
+.navbar-links-a:hover {
+  transition: all;
+  transition-duration: 1s;
+  opacity: 0.8;
+  text-shadow: 2rem 2rem 2rem #000000;
+}
+
 .navbar-links-active {
-  font-size: clamp(1rem, 2vw, 3rem);
-  padding-left: 0.5rem;
+  font-size: clamp(1rem, 1.7vw, 2.5rem);
+  padding-left: 0.35rem;
   width: 100%;
   display: flex;
   align-items: center;
